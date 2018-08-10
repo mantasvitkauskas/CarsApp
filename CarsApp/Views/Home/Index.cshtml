@@ -1,0 +1,33 @@
+﻿@model List<CarsApp.Models.Car>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>List of cars</h2>
+
+<table>
+    <tr>
+        <th>Number</th>
+        <th>Year_Made</th>
+        <th>Model</th>
+        <th>CurrentSegmentName</th>
+        <th>CurrentUserName</th>
+        <th>StatusName</th>
+        <th>PreviousSegmentName</th>
+        <th>PreviousUserName</th>
+    </tr>
+    @foreach (CarsApp.Models.Car c in Model)
+    {
+    <tr>
+        <td>@c.Number</td>
+        <td>@c.Year_Made</td>
+        <td>@c.Model</td>
+        <td>@c.CurrentSegmentName</td>
+        <td>@c.CurrentUserName</td>
+        <td>@c.StatusName</td>
+        <td>@c.PreviousSegmentName</td>
+        <td>@c.PreviousUserName</td>
+    </tr>
+    }
+</table>
+
